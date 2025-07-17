@@ -1,9 +1,5 @@
 function Card() {
-  return (
-    <div>
-      <h4>Card</h4>
-    </div>
-  );
+  return <div className="cardContainer"></div>;
 }
 
 export default Card;
