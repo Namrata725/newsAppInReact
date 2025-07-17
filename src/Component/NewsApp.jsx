@@ -48,7 +48,7 @@ function NewsApp() {
       </div>
 
       <div className="news-cards">
-        <Card />
+        <Card data={data} />
       </div>
     </div>
   );
