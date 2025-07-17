@@ -24,6 +24,11 @@ function NewsApp() {
     getData();
   }, []);
 
+  const userInput = (e) => {
+    setSearchTerm(e.target.value);
+    getData();
+  };
+
   return (
     <div>
       <nav className="navbar">
@@ -39,17 +44,32 @@ function NewsApp() {
           </li>
         </ul>
         <div className="search-bar">
-          <input type="text" placeholder="Search News" onChange={handleInput} />
+          <input
+            type="text"
+            placeholder="Search News"
+            onChange={handleInput}
+            value={searchTerm}
+          />
           <button onClick={getData}>Search</button>
         </div>
       </nav>
 
       <div className="category-buttons">
-        <button>Sports</button>
-        <button>Politics</button>
-        <button>Entertainment</button>
-        <button>Health</button>
-        <button>Fitness</button>
+        <button onClick={userInput} value={"sports"}>
+          Sports
+        </button>
+        <button onClick={userInput} value={"politics"}>
+          Politics
+        </button>
+        <button onClick={userInput} value={"entertainment"}>
+          Entertainment
+        </button>
+        <button onClick={userInput} value={"health"}>
+          Health
+        </button>
+        <button onClick={userInput} value={"fitness"}>
+          Fitness
+        </button>
       </div>
 
       <div className="news-cards">
