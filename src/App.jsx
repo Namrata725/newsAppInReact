@@ -1,7 +1,9 @@
+import NewsApp from "./Component/NewsApp";
+
 function App() {
   return (
     <>
-      <h4>DIV</h4>
+      <NewsApp />
     </>
   );
 }
