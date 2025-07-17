@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "./Card";
 import "./Newspaper.css";
 function NewsApp() {
@@ -19,6 +19,11 @@ function NewsApp() {
   const handleInput = (e) => {
     setSearchTerm(e.target.value);
   };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div>
       <nav className="navbar">
